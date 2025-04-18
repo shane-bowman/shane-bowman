@@ -18,7 +18,7 @@
 
 /* Global Colors */
 :root {
-  --background-color: #ffffff; /* Background for website and sections */
+  --background-color: #f8f9fa; /* Light gray background for a softer look */
   --default-color: #4e4e4e; /* Default text color */
   --heading-color: #0a090f; /* Headings and titles */
   --accent-color: #0078ff; /* Brand color for buttons, links */
@@ -38,7 +38,7 @@
 
 /* Color Presets */
 .light-background {
-  --background-color: #f9f9f9;
+  --background-color: #e9ecef; /* Slightly darker gray for preset */
   --surface-color: #ffffff;
 }
 
@@ -98,7 +98,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #343a40;
+  --background-color: #343a40; /* Dark gray for a sleek, professional nav bar */
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
@@ -432,12 +432,10 @@ h6 {
   bottom: 15px;
 }
 
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
+/* Disable aos animation delay on mobile devices */
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
-    transition-delay: 0 !important;
+    transition-delay: 0s !important; /* Fixed: Added 's' for valid time unit */
   }
 }
 
@@ -631,17 +629,12 @@ section,
   color: var(--contrast-color);
 }
 
-/*--------------------------------------------------------------
-# Custom Artifact Styles
---------------------------------------------------------------*/
+/* Enhanced Artifact Styles */
 .artifact-item {
+  border: 1px solid #dee2e6; /* Subtle border for card separation */
   border-radius: 10px; /* Rounds corners for modern look */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   transition: transform 0.3s ease; /* Smooth hover effect */
-}
-
-.artifact-item:hover {
-  transform: scale(1.05); /* Enlarges card on hover */
 }
 
 .artifact-item img {
@@ -657,14 +650,38 @@ section,
 
 .artifact-info h4 {
   color: var(--accent-color); /* Brand blue for titles */
+  font-size: 1.25rem; /* Slightly smaller for balance */
 }
 
-.btn-primary {
-  background-color: var(--accent-color); /* Brand blue for buttons */
-  border-color: var(--accent-color);
+.artifact-info p {
+  font-size: 0.9rem; /* Smaller for brevity */
+  margin-bottom: 10px;
 }
 
-.btn-primary:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%); /* Darker on hover */
-  border-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+.artifact-info .btn-primary {
+  margin-top: 10px; /* Spacing above button */
+  font-size: 14px; /* Compact button */
+}
+
+/* GitHub Links */
+.artifact-info a[href*="github.com"] {
+  font-size: 0.9rem; /* Smaller font for links */
+  color: var(--accent-color); /* Brand blue */
+}
+.artifact-info a[href*="github.com"] i {
+  margin-right: 5px; /* Space before text */
+}
+.detail-section a[href*="github.com"] {
+  font-size: 0.9rem; /* Match artifact links */
+  color: var(--accent-color);
+}
+
+/* 404 Page */
+.error-page h2 {
+  font-size: 2.5rem; /* Large heading */
+  margin-bottom: 1rem;
+}
+.error-page p {
+  font-size: 1.2rem; /* Clear message */
+  margin-bottom: 2rem;
 }

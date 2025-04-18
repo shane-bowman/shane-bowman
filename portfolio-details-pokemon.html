@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Pokémon Web Application - Shane Bowman's Portfolio</title>
+  <meta name="description" content="Details of Shane Bowman's Pokémon Web Application project">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+<header id="header" class="header d-flex align-items-center sticky-top">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center">
+      <h1 class="sitename">Shane Bowman</h1>
+    </a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#welcome">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skills & Experience</a></li>
+        <li><a href="index.html#artifacts" class="active">Artifacts</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+  </div>
+</header>
+<main class="main">
+  <section class="section">
+    <div class="container">
+      <h2>Pokémon Web Application</h2>
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <img src="assets/img/pokelist.png" class="img-fluid" alt="Home page of Pokémon Web Application showing list of Pokémon names">
+        </div>
+        <div class="col-md-4">
+          <img src="assets/img/pikachu.png" class="img-fluid" alt="Details page of Pokémon Web Application showing Pikachu attributes">
+        </div>
+        <div class="col-md-4">
+          <img src="assets/img/pokeactivity.png" class="img-fluid" alt="Recent activity page of Pokémon Web Application">
+        </div>
+      </div>
+      <p><strong>Description:</strong> Developed a web application fetching Pokémon data from PokéAPI, featuring Google authentication, session-based recent activity tracking, and an image upload form with cookie-based form autofill. Users can view Pokémon lists, filter by type, and see detailed attributes.</p>
+      <p><strong>Reflection:</strong> This project strengthened my JavaScript and API integration skills, particularly in handling JSON data and Passport authentication. Implementing session tracking and cookie storage was challenging but improved my understanding of stateful web apps. I plan to enhance future projects with real-time data updates using WebSockets.</p>
+      <p><strong>Skills Demonstrated:</strong> JavaScript, Node.js, Passport authentication, PokéAPI, session management, cookie handling, UI/UX design.</p>
+      <p><strong>Source Code:</strong> <a href="https://github.com/shane-bowman/CWEB280-Project1-2" aria-label="View Pokémon web app source code on GitHub">GitHub Repository</a></p>
+      <a href="index.html#artifacts" class="btn btn-primary" aria-label="Return to artifacts section">Back to Artifacts</a>
+    </div>
+  </section>
+</main>
+<footer id="footer" class="footer accent-background">
+  <div class="container">
+    <div class="copyright text-center">
+      <p>© 2025 Shane Bowman. All Rights Reserved.</p>
+      <p>This portfolio is the original work of Shane Bowman, created for TCOM 291, in compliance with Saskatchewan Polytechnic’s Policy 1211(a) on academic integrity.</p>
+    </div>
+    <div class="social-links d-flex justify-content-center">
+      <a href="https://github.com/shane-bowman"><i class="bi bi-github"></i></a>
+    </div>
+    <div class="credits">
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
