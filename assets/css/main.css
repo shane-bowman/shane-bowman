@@ -443,7 +443,7 @@ section, .section {
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 40px;
+  padding-bottom: 15px;
   position: relative;
 }
 
@@ -469,7 +469,7 @@ section, .section {
 }
 
 .section-title p {
-  margin-bottom: 0;
+  margin-bottom: 45px; /* Spacing below subtitle */
 }
 
 /*--------------------------------------------------------------
