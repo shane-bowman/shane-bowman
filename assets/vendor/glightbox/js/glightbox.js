@@ -851,7 +851,7 @@
             if (this.instance.settings.dragAutoSnap && doClose) {
               this.instance.close();
             }
-            return;
+
           }
         }
       }
@@ -924,7 +924,7 @@
       img.style.height = data.height;
     }
     slideMedia.insertBefore(img, slideMedia.firstChild);
-    return;
+
   }
 
   function slideVideo(slide, data, index, callback) {
@@ -1041,7 +1041,7 @@
     if (isFunction(callback)) {
       callback();
     }
-    return;
+
   }
 
   function slideIframe(slide, data, index, callback) {
@@ -1053,7 +1053,7 @@
     slideMedia.parentNode.style.maxWidth = data.width;
     slideMedia.parentNode.style.height = data.height;
     slideMedia.appendChild(iframe);
-    return;
+
   }
 
   var SlideConfigParser = function () {

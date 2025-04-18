@@ -51,11 +51,11 @@
 }
 
 .accent-background {
-  --background-color: #0078ff;
+  --background-color: #1e3b5e; /* Dark gray to match header */
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --accent-color: #ffffff;
-  --surface-color: #3393ff;
+  --accent-color: #0078ff; /* Retain blue for buttons/links */
+  --surface-color: #ffffff; /* White for boxed elements */
   --contrast-color: #ffffff;
 }
 
@@ -69,7 +69,7 @@
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #f8f9fa !important; /* Explicit light gray background with fallback */
   font-family: var(--default-font);
 }
 
@@ -91,14 +91,14 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: var(--heading-font), serif;
 }
 
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #343a40; /* Dark gray for a sleek, professional nav bar */
+  --background-color: #1e3b5e; /* Dark gray for a sleek, professional nav bar */
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
