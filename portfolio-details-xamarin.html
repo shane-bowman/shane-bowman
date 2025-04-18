@@ -5,8 +5,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Xamarin Mobile App - Shane Bowman's Portfolio</title>
   <meta name="description" content="Details of Shane Bowman's Xamarin Mobile App project">
-  <link href="assets/img/favicon/favicon-32x32.png" rel="icon">
-  <link href="assets/img/favicon/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
@@ -19,11 +19,11 @@
     </a>
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="index.html#welcome">Home</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#skills">Skills & Experience</a></li>
-        <li><a href="index.html#artifacts" class="active">Artifacts</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html#welcome" aria-label="Navigate to home section on main page">Home</a></li>
+        <li><a href="index.html#about" aria-label="Navigate to about section on main page">About</a></li>
+        <li><a href="index.html#skills" aria-label="Navigate to skills and experience section on main page">Skills & Experience</a></li>
+        <li><a href="index.html#artifacts" class="active" aria-label="Navigate to artifacts section on main page">Artifacts</a></li>
+        <li><a href="index.html#contact" aria-label="Navigate to contact section on main page">Contact</a></li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
@@ -45,7 +45,7 @@
         </div>
       </div>
       <p><strong>Description:</strong> Developed a cross-platform mobile application for COSC295 using C# and Xamarin to track game matches. The app features a settings page for database reset with hardcoded games, an opponent list with context menu deletion and cascading match removal, a matches page with game and date pickers, and a games page displaying match totals, all integrated with a local database for dynamic data management.</p>
-      <p><strong>Reflection:</strong> This project sharpened my C# and Xamarin skills, particularly in designing intuitive UI and managing asynchronous database operations. Debugging async calls for the opponent deletion feature, which required cascading match updates, was challenging but enhanced my problem-solving abilities. Balancing assignment deadlines with code quality improved my time management. I plan to explore Flutter for future cross-platform apps to leverage its robust framework, building on lessons learned in state management and error handling.</p>
+      <p><strong>Reflection:</strong> The Xamarin app honed my C# skills, focusing on UI and async operations. Debugging async match deletions tested my problem-solving, overcoming complex sync issues. Balancing deadlines enhanced my time management, prioritizing UI tasks. I plan to use Flutter for future apps, applying state management lessons.</p>
       <p><strong>Skills Demonstrated:</strong> C#, Xamarin, UI/UX design, database management, asynchronous programming, problem-solving, time management.</p>
       <p><strong>Source Code:</strong> <a href="https://github.com/shane-bowman/COSC295-Xamarin-Assign2" aria-label="View Xamarin app source code on GitHub">GitHub Repository</a></p>
       <p><strong>Last Edited:</strong> April 18, 2025</p>
@@ -53,7 +53,6 @@
     </div>
   </section>
 </main>
-<!-- Footer -->
 <footer id="footer" class="footer accent-background">
   <div class="container">
     <div class="copyright text-center">

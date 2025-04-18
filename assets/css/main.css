@@ -1,10 +1,10 @@
 /**
-* Template Name: DevFolio
-* Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Template Name: DevFolio
+ * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+ * Updated: April 18, 2025 with Bootstrap v5.3.3
+ * Author: BootstrapMade.com
+ * License: https://bootstrapmade.com/license/
+ */
 
 /*--------------------------------------------------------------
 # Font & Color Variables
@@ -18,7 +18,7 @@
 
 /* Global Colors */
 :root {
-  --background-color: #f8f9fa; /* Light gray background for a softer look */
+  --background-color: #f8f9fa; /* Light gray background */
   --default-color: #4e4e4e; /* Default text color */
   --heading-color: #0a090f; /* Headings and titles */
   --accent-color: #0078ff; /* Brand color for buttons, links */
@@ -38,7 +38,7 @@
 
 /* Color Presets */
 .light-background {
-  --background-color: #e9ecef; /* Slightly darker gray for preset */
+  --background-color: #e9ecef;
   --surface-color: #ffffff;
 }
 
@@ -51,11 +51,11 @@
 }
 
 .accent-background {
-  --background-color: #1e3b5e; /* Dark gray to match header */
+  --background-color: #1e3b5e;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --accent-color: #0078ff; /* Retain blue for buttons/links */
-  --surface-color: #ffffff; /* White for boxed elements */
+  --accent-color: #0078ff;
+  --surface-color: #ffffff;
   --contrast-color: #ffffff;
 }
 
@@ -69,7 +69,7 @@
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
-  background-color: #f8f9fa !important; /* Explicit light gray background with fallback */
+  background-color: var(--background-color);
   font-family: var(--default-font);
 }
 
@@ -84,28 +84,28 @@ a:hover {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font), serif;
+  font-family: var(--heading-font);
 }
 
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #1e3b5e; /* Dark gray for a sleek, professional nav bar */
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 20px 0;
+  background-color: #2E2E2E;
+  color: #ffffff;
+  padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
+}
+
+.header .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 0 15px;
 }
 
 .header .logo {
@@ -121,7 +121,7 @@ h6 {
   font-size: 30px;
   margin: 0;
   font-weight: 700;
-  color: var(--heading-color);
+  color: #ffffff;
 }
 
 .scrolled .header {
@@ -131,110 +131,104 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/* Desktop Navigation */
-@media (min-width: 1200px) {
-  .navmenu {
-    padding: 0;
-  }
+.navmenu {
+  padding: 0;
+}
 
-  .navmenu ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    align-items: center;
-  }
+.navmenu ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
 
-  .navmenu li {
-    position: relative;
-  }
+.navmenu li {
+  position: relative;
+}
 
-  .navmenu>ul>li {
-    white-space: nowrap;
-    padding: 15px 14px;
-  }
+.navmenu>ul>li {
+  white-space: nowrap;
+  padding: 15px 14px;
+}
 
-  .navmenu>ul>li:last-child {
-    padding-right: 0;
-  }
+.navmenu>ul>li:last-child {
+  padding-right: 0;
+}
 
-  .navmenu a,
-  .navmenu a:focus {
-    color: var(--nav-color);
-    font-size: 15px;
-    padding: 0 2px;
-    font-family: var(--nav-font);
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    white-space: nowrap;
-    transition: 0.3s;
-    position: relative;
-  }
+.navmenu a,
+.navmenu a:focus {
+  color: #ffffff;
+  font-size: 15px;
+  padding: 0 2px;
+  font-family: var(--nav-font);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  transition: 0.3s;
+  position: relative;
+}
 
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    transition: 0.3s;
-  }
+.navmenu a i,
+.navmenu a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+  transition: 0.3s;
+}
 
-  .navmenu>ul>li>a:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -6px;
-    left: 0;
-    background-color: var(--nav-hover-color);
-    visibility: hidden;
-    width: 0px;
-    transition: all 0.3s ease-in-out 0s;
-  }
+.navmenu>ul>li>a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: #ffffff;
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
 
-  .navmenu a:hover:before,
-  .navmenu li:hover>a:before,
-  .navmenu .active:before {
-    visibility: visible;
-    width: 100%;
-  }
+.navmenu a:hover:before,
+.navmenu li:hover>a:before,
+.navmenu .active:before {
+  visibility: visible;
+  width: 100%;
+}
 
-  .navmenu li:hover>a,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-hover-color);
-  }
+.navmenu li:hover>a,
+.navmenu .active,
+.navmenu .active:focus {
+  color: #ffffff;
 }
 
 /* Mobile Navigation */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
-    color: var(--nav-color);
-    font-size: 28px;
+    color: #ffffff;
+    font-size: 24px;
     line-height: 0;
-    margin-right: 10px;
+    margin-right: 5px;
     cursor: pointer;
     transition: color 0.3s;
   }
 
   .navmenu {
-    padding: 0;
     z-index: 9997;
   }
 
   .navmenu ul {
     display: none;
-    list-style: none;
     position: absolute;
     inset: 60px 20px 20px 20px;
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
@@ -242,10 +236,10 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-dropdown-color);
+    color: #212529;
     padding: 10px 20px;
     font-family: var(--nav-font);
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -266,26 +260,19 @@ h6 {
     justify-content: center;
     border-radius: 50%;
     transition: 0.3s;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+    background-color: rgba(0, 120, 255, 0.1);
   }
 
   .navmenu a i:hover,
   .navmenu a:focus i:hover {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
+    background-color: #0078ff;
+    color: #ffffff;
   }
 
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .active i,
-  .navmenu .active:focus i {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    transform: rotate(180deg);
+    color: #0078ff;
   }
 
   .mobile-nav-active {
@@ -295,10 +282,9 @@ h6 {
   .mobile-nav-active .mobile-nav-toggle {
     color: #fff;
     position: absolute;
-    font-size: 32px;
+    font-size: 28px;
     top: 15px;
     right: 15px;
-    margin-right: 0;
     z-index: 9999;
   }
 
@@ -319,8 +305,8 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: #ffffff;
+  background-color: #2E2E2E;
   font-size: 14px;
   padding: 40px 0;
   position: relative;
@@ -341,16 +327,16 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 30%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: rgba(255, 255, 255, 0.6);
   margin: 0 5px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--default-color);
-  border-color: var(--default-color);
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
 .footer .credits {
@@ -360,7 +346,7 @@ h6 {
 }
 
 .footer .credits a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /*--------------------------------------------------------------
@@ -371,7 +357,7 @@ h6 {
   inset: 0;
   z-index: 999999;
   overflow: hidden;
-  background: var(--background-color);
+  background: #f8f9fa;
   transition: all 0.6s ease-out;
 }
 
@@ -381,7 +367,7 @@ h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #ffffff;
-  border-color: var(--accent-color) transparent var(--accent-color) transparent;
+  border-color: #0078ff transparent #0078ff transparent;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -408,7 +394,7 @@ h6 {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color: #0078ff;
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -417,13 +403,13 @@ h6 {
 
 .scroll-top i {
   font-size: 24px;
-  color: var(--contrast-color);
+  color: #ffffff;
   line-height: 0;
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-  color: var(--contrast-color);
+  background-color: rgba(0, 120, 255, 0.8);
+  color: #ffffff;
 }
 
 .scroll-top.active {
@@ -432,30 +418,22 @@ h6 {
   bottom: 15px;
 }
 
-/* Disable aos animation delay on mobile devices */
+/* Disable AOS animation delay on mobile */
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
-    transition-delay: 0s !important; /* Fixed: Added 's' for valid time unit */
+    transition-delay: 0s !important;
   }
 }
 
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
-section,
-.section {
+section, .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0; /* Consistent section padding for white space */
-  scroll-margin-top: 92px;
+  padding: 60px 0;
+  scroll-margin-top: 76px;
   overflow: clip;
-}
-
-@media (max-width: 1199px) {
-  section,
-  .section {
-    scroll-margin-top: 76px;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -463,7 +441,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   position: relative;
 }
 
@@ -471,7 +449,7 @@ section,
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   position: relative;
 }
 
@@ -481,7 +459,7 @@ section,
   display: block;
   width: 50px;
   height: 3px;
-  background: var(--accent-color);
+  background: #0078ff;
   left: 0;
   right: 0;
   bottom: 0;
@@ -497,18 +475,17 @@ section,
 --------------------------------------------------------------*/
 .welcome {
   width: 100%;
-  min-height: calc(100vh - 92px); /* Full viewport height minus header */
+  min-height: calc(100vh - 76px);
   position: relative;
-  padding: 60px 0;
+  padding: 40px 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.welcome img {
+.welcome .welcome-bg {
   position: absolute;
   inset: 0;
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -517,7 +494,7 @@ section,
 
 .welcome::before {
   content: "";
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)); /* Gradient overlay for text contrast */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -526,40 +503,33 @@ section,
 .welcome .container {
   position: relative;
   z-index: 3;
+  text-align: center;
 }
 
 .welcome h2 {
   margin: 0;
-  font-size: 3rem; /* Larger heading for emphasis */
+  font-size: 48px;
   font-weight: 700;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Subtle shadow for clarity */
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .welcome p {
   margin: 5px 0 0 0;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 600;
+  color: #ffffff;
 }
 
 .welcome p span {
   letter-spacing: 1px;
 }
 
-@media (max-width: 768px) {
-  .welcome h2 {
-    font-size: 32px; /* Smaller heading for mobile */
-  }
-
-  .welcome p {
-    font-size: 20px; /* Smaller text for mobile */
-  }
-}
-
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
 .about .container {
-  background-color: var(--surface-color);
+  background-color: #ffffff;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 30px;
 }
@@ -568,7 +538,7 @@ section,
   font-size: 28px;
   position: relative;
   padding-bottom: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: 700;
 }
 
@@ -578,110 +548,364 @@ section,
   display: block;
   width: 64px;
   height: 3px;
-  background: var(--accent-color);
+  background: #0078ff;
   left: 0;
   bottom: 0;
-  margin: auto;
 }
 
 .about .about-me p {
-  font-size: 18px;
+  font-size: 16px;
+}
+
+.about .about-info p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/*--------------------------------------------------------------
+# Skills Section
+--------------------------------------------------------------*/
+.skills .container {
+  padding: 0 15px;
+}
+
+.skills h5 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.skills ul {
+  padding-left: 20px;
+}
+
+.skills ul li {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/*--------------------------------------------------------------
+# Artifacts Section
+--------------------------------------------------------------*/
+.artifacts .artifact-item {
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.artifacts .artifact-item img {
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+}
+
+.artifacts .artifact-info {
+  padding: 15px;
+}
+
+.artifacts .artifact-info h4 {
+  color: #0078ff;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.artifacts .artifact-info p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.artifacts .artifact-info .btn-primary {
+  font-size: 14px;
+}
+
+.artifacts .artifact-info a[href*="github.com"] {
+  font-size: 14px;
+  color: #0078ff;
+}
+
+.artifacts .artifact-info a[href*="github.com"] i {
+  margin-right: 5px;
 }
 
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-wrap {
-  background-color: var(--surface-color);
+  background-color: #ffffff;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  padding: 15px;
   margin-bottom: 30px;
 }
 
-.contact .info-item i {
-  font-size: 20px;
-  color: var(--accent-color);
-  width: 56px;
-  height: 56px;
+.contact .contact-flex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.contact .contact-item {
   display: flex;
-  justify-content: center;
   align-items: center;
-  transition: all 0.3s ease-in-out;
-  border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 40%);
-  margin-right: 15px;
+  min-width: 0;
 }
 
-.contact .info-item h3 {
-  font-size: 18px;
+.contact .contact-item i {
+  font-size: 24px;
+  color: #4e4e4e;
+  margin-right: 6px;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact .contact-item a:hover i {
+  color: #0078ff;
+}
+
+.contact .contact-item .contact-text {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact .contact-item .contact-text strong {
+  color: #000000;
+  font-size: 16px;
   font-weight: 700;
-  margin: 0 0 2px 0;
+  margin-right: 4px;
 }
 
-.contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
+.contact .contact-item .contact-text .contact-link {
   font-size: 14px;
+  color: #0078ff;
 }
 
-.contact .info-item:hover i {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-/* Enhanced Artifact Styles */
-.artifact-item {
-  border: 1px solid #dee2e6; /* Subtle border for card separation */
-  border-radius: 10px; /* Rounds corners for modern look */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: transform 0.3s ease; /* Smooth hover effect */
-}
-
-.artifact-item img {
-  border-radius: 10px 10px 0 0; /* Rounds top image corners */
-  object-fit: cover; /* Prevents image distortion */
-  height: 200px; /* Consistent image height */
-  width: 100%; /* Full card width */
-}
-
-.artifact-info {
-  padding: 15px; /* Content spacing */
-}
-
-.artifact-info h4 {
-  color: var(--accent-color); /* Brand blue for titles */
-  font-size: 1.25rem; /* Slightly smaller for balance */
-}
-
-.artifact-info p {
-  font-size: 0.9rem; /* Smaller for brevity */
-  margin-bottom: 10px;
-}
-
-.artifact-info .btn-primary {
-  margin-top: 10px; /* Spacing above button */
-  font-size: 14px; /* Compact button */
-}
-
-/* GitHub Links */
-.artifact-info a[href*="github.com"] {
-  font-size: 0.9rem; /* Smaller font for links */
-  color: var(--accent-color); /* Brand blue */
-}
-.artifact-info a[href*="github.com"] i {
-  margin-right: 5px; /* Space before text */
-}
+/* Detail Pages and 404 */
 .detail-section a[href*="github.com"] {
-  font-size: 0.9rem; /* Match artifact links */
-  color: var(--accent-color);
+  font-size: 14px;
+  color: #0078ff;
 }
 
-/* 404 Page */
 .error-page h2 {
-  font-size: 2.5rem; /* Large heading */
-  margin-bottom: 1rem;
+  font-size: 36px;
+  margin-bottom: 15px;
 }
+
 .error-page p {
-  font-size: 1.2rem; /* Clear message */
-  margin-bottom: 2rem;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* General */
+  section, .section {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  /* Header */
+  .header {
+    padding: 10px 0;
+  }
+
+  .header .container-fluid {
+    padding: 0 10px;
+  }
+
+  .header .logo h1 {
+    font-size: 24px;
+  }
+
+  .mobile-nav-toggle {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+
+  .navmenu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .navmenu ul li {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .navmenu a {
+    font-size: 15px;
+    padding: 8px 15px;
+  }
+
+  /* Welcome Section */
+  .welcome {
+    min-height: calc(100vh - 60px);
+    padding: 20px 0;
+  }
+
+  .welcome h2 {
+    font-size: 28px;
+  }
+
+  .welcome p {
+    font-size: 18px;
+  }
+
+  .welcome .welcome-bg {
+    object-position: center;
+  }
+
+  /* About Section */
+  .about .container {
+    padding: 20px;
+  }
+
+  .about .row {
+    flex-direction: column;
+  }
+
+  .about .col-12 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .about .about-me h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .about .about-me p {
+    font-size: 15px;
+  }
+
+  .about .about-info p {
+    font-size: 14px;
+  }
+
+  /* Skills Section */
+  .skills .row {
+    flex-direction: column;
+  }
+
+  .skills .col-12 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .skills h5 {
+    font-size: 20px;
+  }
+
+  .skills ul li {
+    font-size: 14px;
+  }
+
+  /* Artifacts Section */
+  .artifacts .row {
+    flex-direction: column;
+  }
+
+  .artifacts .artifact-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .artifacts .artifact-item img {
+    height: 150px;
+  }
+
+  .artifacts .artifact-info h4 {
+    font-size: 18px;
+  }
+
+  .artifacts .artifact-info p {
+    font-size: 13px;
+  }
+
+  .artifacts .artifact-info .btn-primary {
+    font-size: 12px;
+  }
+
+  /* Contact Section */
+  .contact .info-wrap {
+    padding: 12px;
+  }
+
+  .contact .contact-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact .contact-item {
+    justify-content: flex-start;
+  }
+
+  .contact .contact-item i {
+    font-size: 22px;
+  }
+
+  .contact .contact-item .contact-text strong {
+    font-size: 15px;
+  }
+
+  .contact .contact-item .contact-text .contact-link {
+    font-size: 13px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 20px 0;
+  }
+
+  .footer .copyright p {
+    font-size: 13px;
+  }
+
+  .footer .social-links a {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .footer .credits {
+    font-size: 12px;
+  }
+
+  /* Detail Pages and 404 */
+  .error-page h2 {
+    font-size: 28px;
+  }
+
+  .error-page p {
+    font-size: 14px;
+  }
+}
+
+/* Medium Screens (768px–992px) */
+@media (max-width: 992px) {
+  .contact .info-wrap {
+    padding: 10px;
+  }
+
+  .contact .contact-flex {
+    gap: 6px;
+  }
+
+  .contact .contact-item i {
+    font-size: 20px;
+  }
+
+  .contact .contact-item .contact-text strong {
+    font-size: 14px;
+  }
+
+  .contact .contact-item .contact-text .contact-link {
+    font-size: 12px;
+  }
 }

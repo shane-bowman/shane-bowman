@@ -7,64 +7,66 @@
   <title>Shane Bowman's TCOM 291 Portfolio</title>
   <meta name="description" content="A showcase of Shane Bowman's technical skills and projects for TCOM 291">
   <meta name="keywords" content="portfolio, Shane Bowman, TCOM 291, software development">
+
   <!-- Favicons -->
-  <link href="assets/img/favicon/favicon.ico" rel="icon">
-  <link href="assets/img/favicon/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
 <body class="index-page">
 
-<header id="header" class="header d-flex align-items-center sticky-top">
-  <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+<header id="header" class="header d-flex align-items-center sticky-top mobile-header">
+  <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
     <a href="index.html" class="logo d-flex align-items-center">
       <h1 class="sitename">Shane Bowman</h1>
     </a>
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#welcome" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills & Experience</a></li>
-        <li><a href="#artifacts">Artifacts</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#welcome" class="active" aria-label="Navigate to home section">Home</a></li>
+        <li><a href="#about" aria-label="Navigate to about section">About</a></li>
+        <li><a href="#skills" aria-label="Navigate to skills and experience section">Skills & Experience</a></li>
+        <li><a href="#artifacts" aria-label="Navigate to artifacts section">Artifacts</a></li>
+        <li><a href="#contact" aria-label="Navigate to contact section">Contact</a></li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
   </div>
 </header>
 
-<main class="main">
-
-  <!-- Welcome Section -->
-  <section id="welcome" class="welcome section dark-background">
-    <img src="assets/img/welcome-bg1.jpg" alt="Tech background" data-aos="fade-in">
-    <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
-      <h2>Hi! I'm Shane Bowman</h2>
-      <p><span class="typed" data-typed-items="Software Developer, Technical Communicator, Problem Solver"></span></p>
-      <p>Building innovative solutions through code and collaboration</p>
-    </div>
-  </section><!-- /Welcome Section -->
+<section id="welcome" class="welcome section dark-background">
+  <img src="assets/img/welcome-bg1.jpg" alt="Tech background" data-aos="fade-in" class="welcome-bg">
+  <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
+    <h2>Hi! I'm Shane Bowman</h2>
+    <p><span class="typed" data-typed-items="Software Developer, Technical Communicator, Problem Solver"></span></p>
+    <p>Building innovative solutions through code and collaboration</p>
+  </div>
+</section>
+<!-- /Welcome Section -->
 
   <!-- About Section -->
   <section id="about" class="about section">
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="row gy-4">
-        <div class="col-md-6">
-          <div class="row justify-content-between gy-4">
-            <div class="col-lg-5">
-              <img src="assets/img/shane.jpg" class="img-fluid" alt="Shane Bowman">
+        <div class="col-12 col-md-6">
+          <div class="row gy-4">
+            <div class="col-12 col-lg-5">
+              <img src="assets/img/shane.jpg" class="img-fluid" alt="Shane Bowman, a software development student, smiling in a professional headshot">
             </div>
-            <div class="col-lg-7 about-info">
+            <div class="col-12 col-lg-7 about-info">
               <p><strong>Name: </strong> <span>Shane Bowman</span></p>
               <p><strong>Profile: </strong> <span>Software Development Student</span></p>
               <p><strong>Email: </strong> <span>shanebowman@live.ca</span></p>
@@ -72,10 +74,10 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-12 col-md-6">
           <div class="about-me">
             <h4>About Me</h4>
-            <p>I’m a student at Saskatchewan Polytechnic, passionate about software development and technical communication. My focus is on creating user-focused solutions using languages like Python, C#, and Flutter. I aim to build innovative software that enhances accessibility and efficiency in the tech industry.</p>
+            <p>I’m a student at Saskatchewan Polytechnic, passionate about software development and technical communication. My focus is on creating user-focused solutions using languages like C#, Flutter, and JavaScript. I aim to build innovative software that enhances accessibility and efficiency in the tech industry.</p>
           </div>
         </div>
       </div>
@@ -89,22 +91,22 @@
       <p>Technical and professional skills developed through coursework and projects</p>
     </div>
     <div class="container" data-aos="fade-up" data-aos-delay="100">
-      <div class="row">
-        <div class="col-md-6">
+      <div class="row gy-4">
+        <div class="col-12 col-md-6">
           <h5>Technical Skills</h5>
           <ul>
-            <li>Python: Developed automation scripts for system administration.</li>
-            <li>C#: Built a Xamarin mobile app for COSC295.</li>
-            <li>Flutter: Created cross-platform app interfaces.</li>
-            <li>Perl: Automated LDAP user and group management.</li>
+            <li>C#: Developed a Xamarin mobile app for COSC295, creating UI components for game match tracking with local database integration.</li>
+            <li>Flutter: Built cross-platform app interfaces for a Hippotherapy app, streamlining patient data entry for therapists.</li>
+            <li>JavaScript: Created a Pokémon web app with PokéAPI, enabling dynamic filtering of Pokémon by type.</li>
+            <li>Perl: Automated LDAP user and group management for efficient system administration.</li>
           </ul>
         </div>
-        <div class="col-md-6">
+        <div class="col-12 col-md-6">
           <h5>Employability Skills</h5>
           <ul>
-            <li>Problem-Solving: Debugged complex code issues in team projects.</li>
-            <li>Teamwork: Collaborated on a Hippotherapy app presentation.</li>
-            <li>Communication: Documented technical processes clearly.</li>
+            <li>Problem-Solving: Debugged async issues in the Xamarin app, ensuring stable match tracking features.</li>
+            <li>Teamwork: Collaborated with peers on a Hippotherapy app, coordinating client meetings to prioritize features.</li>
+            <li>Communication: Documented technical processes for projects, creating clear user guides and API references.</li>
           </ul>
         </div>
       </div>
@@ -119,7 +121,7 @@
     </div>
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 artifact-item">
+        <div class="col-12 col-md-6 col-lg-4 artifact-item">
           <img src="assets/img/xamgames2.png" class="img-fluid" alt="Main screen of Xamarin Mobile App interface">
           <div class="artifact-info">
             <h4>Xamarin Mobile App</h4>
@@ -128,7 +130,7 @@
             <a href="https://github.com/shane-bowman/COSC295-Xamarin-Assign2" class="d-block mt-2" aria-label="View Xamarin app source code on GitHub"><i class="bi bi-github"></i> Source Code</a>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 artifact-item">
+        <div class="col-12 col-md-6 col-lg-4 artifact-item">
           <img src="assets/img/pokelogo.png" class="img-fluid" alt="Home page of Pokémon Web Application showing list of Pokémon names">
           <div class="artifact-info">
             <h4>Pokémon Web Application</h4>
@@ -137,7 +139,7 @@
             <a href="https://github.com/shane-bowman/CWEB280-Project1-2" class="d-block mt-2" aria-label="View Pokémon web app source code on GitHub"><i class="bi bi-github"></i> Source Code</a>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 artifact-item">
+        <div class="col-12 col-md-6 col-lg-4 artifact-item">
           <img src="assets/img/hippologo.png" class="img-fluid" alt="Main screen of Hippotherapy Flutter App">
           <div class="artifact-info">
             <h4>Hippotherapy Flutter App</h4>
@@ -158,24 +160,33 @@
     </div>
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="info-wrap">
-        <div class="row gy-5">
-          <div class="col-lg-6">
-            <div class="info-item d-flex align-items-center">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email</h3>
-                <p>shanebowman@live.ca</p>
-              </div>
-            </div>
+        <div class="row contact-flex">
+          <div class="col-12 col-lg-4 contact-item">
+            <a href="mailto:shanebowman@live.ca" aria-label="Send email to Shane Bowman">
+              <i class="bi bi-envelope"></i>
+              <span class="contact-text">
+              <strong>Email:</strong>
+              <span class="contact-link">shanebowman@live.ca</span>
+            </span>
+            </a>
           </div>
-          <div class="col-lg-6">
-            <div class="info-item d-flex align-items-center">
-              <i class="bi bi-github flex-shrink-0"></i>
-              <div>
-                <h3>GitHub</h3>
-                <p><a href="https://github.com/shane-bowman">github.com/shane-bowman</a></p>
-              </div>
-            </div>
+          <div class="col-12 col-lg-4 contact-item">
+            <a href="https://github.com/shane-bowman" target="_blank" aria-label="Visit Shane Bowman's GitHub profile">
+              <i class="bi bi-github"></i>
+              <span class="contact-text">
+              <strong>GitHub:</strong>
+              <span class="contact-link">github.com/shane-bowman</span>
+            </span>
+            </a>
+          </div>
+          <div class="col-12 col-lg-4 contact-item">
+            <a href="https://www.linkedin.com/in/shane-bowman7677" target="_blank" aria-label="Visit Shane Bowman's LinkedIn profile">
+              <i class="bi bi-linkedin"></i>
+              <span class="contact-text">
+              <strong>LinkedIn:</strong>
+              <span class="contact-link">linkedin.com/in/shane-bowman7677</span>
+            </span>
+            </a>
           </div>
         </div>
       </div>
@@ -184,7 +195,6 @@
 
 </main>
 
-<!-- Footer -->
 <footer id="footer" class="footer accent-background">
   <div class="container">
     <div class="copyright text-center">
