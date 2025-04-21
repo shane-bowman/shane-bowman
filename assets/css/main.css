@@ -1,7 +1,7 @@
 /**
  * Template Name: DevFolio
  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
- * Updated: April 18, 2025 with Bootstrap v5.3.3
+ * Updated: April 21, 2025 with Bootstrap v5.3.3
  * Author: BootstrapMade.com
  * License: https://bootstrapmade.com/license/
  */
@@ -18,28 +18,28 @@
 
 /* Global Colors */
 :root {
-  --background-color: #F5F6FA;
-  --default-color: #444444;
-  --heading-color: #2E2E2E;
-  --accent-color: #17A2B8;
-  --surface-color: #FFFFFF;
-  --contrast-color: #FFFFFF;
+  --background-color: #1A1E26; /* Deep, soft gray for dark theme */
+  --default-color: #D3D4D8; /* Light gray for body text */
+  --heading-color: #E6E7EB; /* Off-white for headings */
+  --accent-color: #17A2B8; /* Cyan, kept for contrast */
+  --surface-color: #2A2F3A; /* Slightly lighter dark gray for containers */
+  --contrast-color: #FFFFFF; /* White for text on dark backgrounds */
 }
 
 /* Nav Menu Colors */
 :root {
   --nav-color: #FFFFFF;
   --nav-hover-color: #FFFFFF;
-  --nav-mobile-background-color: #FFFFFF;
-  --nav-dropdown-background-color: #FFFFFF;
-  --nav-dropdown-color: #212529;
+  --nav-mobile-background-color: #2A2F3A; /* Match container color for mobile nav */
+  --nav-dropdown-background-color: #2A2F3A;
+  --nav-dropdown-color: #D3D4D8;
   --nav-dropdown-hover-color: #17A2B8;
 }
 
 /* Color Presets */
 .light-background {
-  --background-color: #EDEFF2;
-  --surface-color: #FFFFFF;
+  --background-color: #2A2F3A;
+  --surface-color: #3A404D;
 }
 
 .dark-background {
@@ -55,7 +55,7 @@
   --default-color: #FFFFFF;
   --heading-color: #FFFFFF;
   --accent-color: #17A2B8;
-  --surface-color: #FFFFFF;
+  --surface-color: #3A404D;
   --contrast-color: #FFFFFF;
 }
 
@@ -146,7 +146,7 @@ p {
 --------------------------------------------------------------*/
 .header {
   background-color: #2E2E2E;
-  color: #ffffff;
+  color: #FFFFFF;
   padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -174,13 +174,12 @@ p {
   font-size: 30px;
   margin: 0;
   font-weight: 700;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .scrolled .header {
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.1);
 }
-
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -201,18 +200,18 @@ p {
   position: relative;
 }
 
-.navmenu>ul>li {
+.navmenu > ul > li {
   white-space: nowrap;
   padding: 15px 14px;
 }
 
-.navmenu>ul>li:last-child {
+.navmenu > ul > li:last-child {
   padding-right: 0;
 }
 
 .navmenu a,
 .navmenu a:focus {
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 15px;
   padding: 0 2px;
   font-family: var(--nav-font), serif;
@@ -233,35 +232,35 @@ p {
   transition: 0.3s;
 }
 
-.navmenu>ul>li>a:before {
+.navmenu > ul > li > a:before {
   content: "";
   position: absolute;
   width: 100%;
   height: 2px;
   bottom: -6px;
   left: 0;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   visibility: hidden;
   transition: all 0.3s ease-in-out 0s;
 }
 
 .navmenu a:hover:before,
-.navmenu li:hover>a:before,
+.navmenu li:hover > a:before,
 .navmenu .active:before {
   visibility: visible;
   width: 100%;
 }
 
-.navmenu li:hover>a,
+.navmenu li:hover > a,
 .navmenu .active,
 .navmenu .active:focus {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 /* Mobile Navigation */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
-    color: #ffffff;
+    color: #FFFFFF;
     font-size: 24px;
     line-height: 0;
     margin-right: 5px;
@@ -280,8 +279,8 @@ p {
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
-    background-color: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--nav-mobile-background-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
@@ -289,7 +288,7 @@ p {
 
   .navmenu a,
   .navmenu a:focus {
-    color: #212529;
+    color: var(--default-color);
     padding: 10px 20px;
     font-family: var(--nav-font), serif;
     font-size: 16px;
@@ -313,7 +312,7 @@ p {
     justify-content: center;
     border-radius: 50%;
     transition: 0.3s;
-    background-color: rgba(0, 120, 255, 0.1);
+    background-color: rgba(23, 169, 184, 0.1); /* Adjusted for accent color */
   }
 
   .navmenu a i:hover,
@@ -333,7 +332,7 @@ p {
   }
 
   .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
+    color: #FFF;
     position: absolute;
     font-size: 28px;
     top: 15px;
@@ -349,7 +348,7 @@ p {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
@@ -358,7 +357,7 @@ p {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: #ffffff;
+  color: #FFFFFF;
   background-color: #2E2E2E;
   font-size: 15px;
   padding: 50px 0;
@@ -439,7 +438,7 @@ p {
   inset: 0;
   z-index: 999999;
   overflow: hidden;
-  background: #f8f9fa;
+  background: #1A1E26; /* Match the dark theme */
   transition: all 0.6s ease-out;
 }
 
@@ -448,7 +447,7 @@ p {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #FFFFFF;
+  border: 6px solid #2A2F3A; /* Match container color */
   border-color: var(--accent-color) transparent var(--accent-color) transparent;
   border-radius: 50%;
   width: 60px;
@@ -551,7 +550,7 @@ section, .section {
 .section-title p {
   font-size: 1.1rem;
   font-style: italic;
-  color: #777;
+  color: #A0A3AA; /* Adjusted for dark theme */
   margin-bottom: 40px;
 }
 
@@ -570,7 +569,6 @@ section, .section {
 # Welcome Section
 --------------------------------------------------------------*/
 .welcome {
-  width: 100%;
   min-height: calc(100vh - 76px);
   position: relative;
   padding: 40px 0;
@@ -588,11 +586,10 @@ section, .section {
   z-index: 1;
 }
 
-.welcome::before {
-  content: "";
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+.welcome-overlay {
   position: absolute;
   inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
   z-index: 2;
 }
 
@@ -603,22 +600,72 @@ section, .section {
 }
 
 .welcome h2 {
-  margin: 0;
-  font-size: 48px;
+  font-size: 3.5rem;
   font-weight: 700;
-  color: #ffffff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
 }
 
-.welcome p {
-  margin: 5px 0 0 0;
-  font-size: 24px;
-  font-weight: 600;
-  color: #ffffff;
+.welcome .typed-wrapper {
+  min-height: 40px;
+  margin-bottom: 20px;
 }
 
-.welcome p span {
-  letter-spacing: 1px;
+.welcome .typed {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.welcome .lead {
+  font-size: 1.2rem;
+  color: #E0E0E0;
+  margin-bottom: 30px;
+}
+
+.welcome .btn-primary {
+  font-size: 1.1rem;
+  padding: 12px 30px;
+  border-radius: 25px;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.welcome .btn-primary:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .welcome {
+    min-height: calc(100vh - 60px);
+    padding: 20px 0;
+  }
+
+  .welcome h2 {
+    font-size: 2.5rem;
+  }
+
+  .welcome .typed {
+    font-size: 1.2rem;
+  }
+
+  .welcome .lead {
+    font-size: 1rem;
+  }
+
+  .welcome .btn-primary {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+
+  .welcome .welcome-bg {
+    object-position: center;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -626,13 +673,16 @@ section, .section {
 --------------------------------------------------------------*/
 .about .container {
   padding: 40px;
+  background: var(--surface-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .about .about-img {
   width: 250px;
   height: 250px;
   object-fit: cover;
-  border: 5px solid var(--accent-color);
+  border: 6px solid var(--accent-color);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -668,6 +718,15 @@ section, .section {
 @media (max-width: 768px) {
   .about .container {
     padding: 20px;
+  }
+
+  .about .row {
+    flex-direction: column;
+  }
+
+  .about .col-12 {
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .about .about-img {
@@ -731,13 +790,13 @@ section, .section {
   padding: 15px;
   margin-bottom: 15px;
   border-left: 4px solid var(--accent-color);
-  background: #F8FAFC;
+  background: #3A404D; /* Slightly lighter than body background */
   border-radius: 0 6px 6px 0;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .skills-section li:hover {
-  background: #EDEFF2;
+  background: #4A505D;
   transform: translateX(5px);
 }
 
@@ -761,6 +820,19 @@ section, .section {
 }
 
 @media (max-width: 768px) {
+  .skills-section {
+    padding: 40px 0;
+  }
+
+  .skills-section .row {
+    flex-direction: column;
+  }
+
+  .skills-section .col-12 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
   .skills-section li {
     padding: 12px;
     margin-bottom: 10px;
@@ -790,7 +862,7 @@ section, .section {
 .artifacts .artifact-card {
   border-radius: 10px;
   overflow: hidden;
-  background: #FFFFFF;
+  background: #3A404D; /* Adjusted for dark theme */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
@@ -865,6 +937,15 @@ section, .section {
 }
 
 @media (max-width: 768px) {
+  .artifacts .row {
+    flex-direction: column;
+  }
+
+  .artifacts .artifact-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
   .artifacts .artifact-card img {
     height: 150px;
   }
@@ -900,11 +981,10 @@ section, .section {
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-/* Contact Section */
 .contact .info-wrap {
   padding: 20px;
   border-radius: 10px;
-  background: #FFFFFF;
+  background: #3A404D; /* Adjusted for dark theme */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
@@ -926,7 +1006,7 @@ section, .section {
 }
 
 .contact .contact-item:hover {
-  background: #F8FAFC;
+  background: #4A505D;
   transform: scale(1.02);
 }
 
@@ -1027,7 +1107,6 @@ section, .section {
   margin-bottom: 20px;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
   /* General */
   section, .section {
@@ -1072,174 +1151,6 @@ section, .section {
     padding: 8px 15px;
   }
 
-  /* Welcome Section */
-  .welcome {
-    min-height: calc(100vh - 76px);
-    position: relative;
-    padding: 40px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .welcome .welcome-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-  }
-
-  .welcome-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-    z-index: 2;
-  }
-
-  .welcome .container {
-    position: relative;
-    z-index: 3;
-    text-align: center;
-  }
-
-  .welcome h2 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: #FFFFFF;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
-  }
-
-  .welcome .typed-wrapper {
-    min-height: 40px;
-    margin-bottom: 20px;
-  }
-
-  .welcome .typed {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #FFFFFF;
-  }
-
-  .welcome .lead {
-    font-size: 1.2rem;
-    color: #E0E0E0;
-    margin-bottom: 30px;
-  }
-
-  .welcome .btn-primary {
-    font-size: 1.1rem;
-    padding: 12px 30px;
-    border-radius: 25px;
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-
-  .welcome .btn-primary:hover {
-    background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-    border-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-    transform: scale(1.05);
-  }
-
-  @media (max-width: 768px) {
-    .welcome {
-      min-height: calc(100vh - 60px);
-      padding: 20px 0;
-    }
-
-    .welcome h2 {
-      font-size: 2.5rem;
-    }
-
-    .welcome .typed {
-      font-size: 1.2rem;
-    }
-
-    .welcome .lead {
-      font-size: 1rem;
-    }
-
-    .welcome .btn-primary {
-      font-size: 1rem;
-      padding: 10px 25px;
-    }
-  }
-
-  /* Skills Section */
-  .skills .row {
-    flex-direction: column;
-  }
-
-  .skills .col-12 {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .skills h5 {
-    font-size: 20px;
-  }
-
-  .skills ul li {
-    font-size: 14px;
-  }
-
-  /* Artifacts Section */
-  .artifacts .row {
-    flex-direction: column;
-  }
-
-  .artifacts .artifact-item {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .artifacts .artifact-item img {
-    height: 150px;
-  }
-
-  .artifacts .artifact-info h4 {
-    font-size: 18px;
-  }
-
-  .artifacts .artifact-info p {
-    font-size: 13px;
-  }
-
-  .artifacts .artifact-info .btn-primary {
-    font-size: 12px;
-  }
-
-  /* Contact Section */
-  .contact .info-wrap {
-    padding: 12px;
-  }
-
-  .contact .contact-flex {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .contact .contact-item {
-    justify-content: flex-start;
-  }
-
-  .contact .contact-item i {
-    font-size: 22px;
-  }
-
-  .contact .contact-item .contact-text strong {
-    font-size: 15px;
-  }
-
-  .contact .contact-item .contact-text .contact-link {
-    font-size: 13px;
-  }
-
   /* Footer */
   .footer {
     padding: 20px 0;
@@ -1266,28 +1177,5 @@ section, .section {
 
   .error-page p {
     font-size: 14px;
-  }
-}
-
-/* Medium Screens (768px–992px) */
-@media (max-width: 992px) {
-  .contact .info-wrap {
-    padding: 10px;
-  }
-
-  .contact .contact-flex {
-    gap: 6px;
-  }
-
-  .contact .contact-item i {
-    font-size: 20px;
-  }
-
-  .contact .contact-item .contact-text strong {
-    font-size: 14px;
-  }
-
-  .contact .contact-item .contact-text .contact-link {
-    font-size: 12px;
   }
 }
