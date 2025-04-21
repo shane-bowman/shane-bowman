@@ -855,6 +855,12 @@ section, .section {
 /*--------------------------------------------------------------
 # Artifacts Section
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Artifacts Section
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Artifacts Section
+--------------------------------------------------------------*/
 .artifacts .artifact-item {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -862,7 +868,7 @@ section, .section {
 .artifacts .artifact-card {
   border-radius: 10px;
   overflow: hidden;
-  background: #3A404D; /* Adjusted for dark theme */
+  background: var(--surface-color);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
@@ -903,37 +909,39 @@ section, .section {
 .artifacts .artifact-links {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 15px;
 }
 
-.artifacts .artifact-info .btn-primary {
+.artifacts .artifact-info .btn-primary,
+.artifacts .artifact-info .github-link {
   font-size: 14px;
   padding: 8px 20px;
   border-radius: 20px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  min-width: 140px; /* Increased for better balance with icons */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
   background-color: var(--accent-color);
-  border-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  color: #FFFFFF;
+  text-decoration: none; /* Remove underline from links */
 }
 
-.artifacts .artifact-info .btn-primary:hover {
+.artifacts .artifact-info .btn-primary:hover,
+.artifacts .artifact-info .github-link:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
   border-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: #FFFFFF;
 }
 
-.artifacts .artifact-info .github-link {
-  font-size: 14px;
-  color: var(--default-color);
-  display: flex;
-  align-items: center;
-  transition: color 0.3s ease;
-}
-
+.artifacts .artifact-info .btn-primary i,
 .artifacts .artifact-info .github-link i {
   margin-right: 5px;
   font-size: 16px;
-}
-
-.artifacts .artifact-info .github-link:hover {
-  color: var(--accent-color);
 }
 
 @media (max-width: 768px) {
@@ -964,17 +972,15 @@ section, .section {
 
   .artifacts .artifact-links {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
   }
 
-  .artifacts .artifact-info .btn-primary {
-    font-size: 13px;
-    padding: 6px 18px;
-  }
-
+  .artifacts .artifact-info .btn-primary,
   .artifacts .artifact-info .github-link {
     font-size: 13px;
+    padding: 6px 18px;
+    min-width: 130px; /* Slightly smaller for mobile */
   }
 }
 
