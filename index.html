@@ -47,11 +47,13 @@
 </header>
 
 <section id="welcome" class="welcome section dark-background">
+  <div class="welcome-overlay"></div>
   <img src="assets/img/welcome-bg1.jpg" alt="Tech background" data-aos="fade-in" class="welcome-bg">
   <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
     <h2>Welcome, I’m Shane Bowman</h2>
-    <p><span class="typed" data-typed-items="Software Developer, Technical Communicator, Problem Solver"></span></p>
-    <p>Developing practical software to solve real-world challenges</p>
+    <p class="typed-wrapper"><span class="typed" data-typed-items="Software Developer, Technical Communicator, Problem Solver"></span></p>
+    <p class="lead">Crafting innovative software solutions to tackle real-world challenges</p>
+    <a href="#artifacts" class="btn btn-primary mt-4" aria-label="Explore Shane Bowman's projects">Explore My Projects</a>
   </div>
 </section>
 <!-- /Welcome Section -->
@@ -84,77 +86,90 @@
   </section><!-- /About Section -->
 
   <!-- Skills & Experience Section -->
-  <section id="skills" class="skills section">
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Skills & Experience</h2>
-      <p>Technical and professional skills developed through coursework and projects</p>
-    </div>
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-      <div class="row gy-4">
-        <div class="col-12 col-md-6">
-          <h5>Technical Skills</h5>
-          <ul>
-            <li>C#: Developed a Xamarin mobile app for COSC295, creating UI components for game match tracking with local database integration.</li>
-            <li>Flutter: Built cross-platform app interfaces for a Hippotherapy app, streamlining patient data entry for therapists.</li>
-            <li>JavaScript: Created a Pokémon web app with PokéAPI, enabling dynamic filtering of Pokémon by type.</li>
-            <li>Perl: Automated LDAP user and group management for efficient system administration.</li>
-            <li>Git: Managed version control for projects like the Hippotherapy app, collaborating with peers via GitHub repositories.</li>
-            <li>Unit Testing: Implemented tests in Flutter and C# projects to ensure code reliability and functionality.</li>
-          </ul>
-        </div>
-        <div class="col-12 col-md-6">
-          <h5>Employability Skills</h5>
-          <ul>
-            <li>Problem-Solving: Debugged async issues in the Xamarin app, ensuring stable match tracking features.</li>
-            <li>Teamwork: Collaborated with peers on a Hippotherapy app, coordinating client meetings to prioritize features.</li>
-            <li>Communication: Documented technical processes for projects, creating clear user guides and API references.</li>
-            <li>Work Ethic: Consistently met project deadlines, ensuring timely delivery.</li>
-            <li>Interpersonal Skills: Built effective relationships during the Hippotherapy app project through client and team coordination.</li>
-            <li>Analytical Thinking: Resolved complex issues like async debugging in Xamarin and authentication in the Pokémon app.</li>
-          </ul>
-        </div>
+<section id="skills" class="skills section skills-section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Skills & Experience</h2>
+    <p>A blend of technical expertise and professional skills honed through projects</p>
+  </div>
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
+      <div class="col-12 col-md-6">
+        <h5>Technical Skills</h5>
+        <ul>
+          <li><i class="bi bi-code-slash"></i> <span><strong>C#:</strong> Developed a Xamarin mobile app for COSC295, creating UI components for game match tracking with local database integration.</span></li>
+          <li><i class="bi bi-phone"></i> <span><strong>Flutter:</strong> Built cross-platform app interfaces for a Hippotherapy app, streamlining patient data entry for therapists.</span></li>
+          <li><i class="bi bi-file-code"></i> <span><strong>JavaScript:</strong> Created a Pokémon web app with PokéAPI, enabling dynamic filtering of Pokémon by type.</span></li>
+          <li><i class="bi bi-terminal"></i> <span><strong>Perl:</strong> Automated LDAP user and group management for efficient system administration.</span></li>
+          <li><i class="bi bi-git"></i> <span><strong>Git:</strong> Managed version control for projects like the Hippotherapy app, collaborating with peers via GitHub repositories.</span></li>
+          <li><i class="bi bi-check2-circle"></i> <span><strong>Unit Testing:</strong> Implemented tests in Flutter and C# projects to ensure code reliability and functionality.</span></li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-6">
+        <h5>Employability Skills</h5>
+        <ul>
+          <li><i class="bi bi-lightbulb"></i> <span><strong>Problem-Solving:</strong> Debugged async issues in the Xamarin app, ensuring stable match tracking features.</span></li>
+          <li><i class="bi bi-people"></i> <span><strong>Teamwork:</strong> Collaborated with peers on a Hippotherapy app, coordinating client meetings to prioritize features.</span></li>
+          <li><i class="bi bi-chat-dots"></i> <span><strong>Communication:</strong> Documented technical processes for projects, creating clear user guides and API references.</span></li>
+          <li><i class="bi bi-briefcase"></i> <span><strong>Work Ethic:</strong> Consistently met project deadlines, such as the COSC295 Xamarin app submission, ensuring timely delivery.</span></li>
+          <li><i class="bi bi-person-hearts"></i> <span><strong>Interpersonal Skills:</strong> Built effective relationships during the Hippotherapy app project through client and team coordination.</span></li>
+          <li><i class="bi bi-bar-chart"></i> <span><strong>Analytical Thinking:</strong> Resolved complex issues like async debugging in Xamarin and authentication in the Pokémon app.</span></li>
+        </ul>
       </div>
     </div>
-  </section><!-- /Skills & Experience Section -->
+  </div>
+</section><!-- /Skills & Experience Section -->
 
   <!-- Artifacts Section -->
-  <section id="artifacts" class="artifacts section">
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Artifacts</h2>
-      <p>Showcasing my technical abilities and reflections</p>
-    </div>
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-      <div class="row gy-4">
-        <div class="col-12 col-md-6 col-lg-4 artifact-item">
+<section id="artifacts" class="artifacts section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Artifacts</h2>
+    <p>Showcasing my technical abilities and reflections</p>
+  </div>
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
+      <div class="col-12 col-md-6 col-lg-4 artifact-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="artifact-card">
           <img src="assets/img/xamgames2.png" class="img-fluid" alt="Main screen of Xamarin Mobile App interface">
           <div class="artifact-info">
             <h4>Xamarin Mobile App</h4>
             <p>Cross-platform app for game match tracking with database management.</p>
-            <a href="portfolio-details-xamarin.html" class="btn btn-primary btn-sm" aria-label="View details of Xamarin Mobile App">View Details</a>
-            <a href="https://github.com/shane-bowman/COSC295-Xamarin-Assign2" class="d-block mt-2" aria-label="View Xamarin app source code on GitHub"><i class="bi bi-github"></i> Source Code</a>
+            <div class="artifact-links">
+              <a href="portfolio-details-xamarin.html" class="btn btn-primary btn-sm" aria-label="View details of Xamarin Mobile App">View Details</a>
+              <a href="https://github.com/shane-bowman/COSC295-Xamarin-Assign2" class="github-link" aria-label="View Xamarin app source code on GitHub"><i class="bi bi-github"></i> Source Code</a>
+            </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4 artifact-item">
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 artifact-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="artifact-card">
           <img src="assets/img/pokelogo.png" class="img-fluid" alt="Home page of Pokémon Web Application showing list of Pokémon names">
           <div class="artifact-info">
             <h4>Pokémon Web Application</h4>
             <p>Web app fetching Pokémon data with Google authentication.</p>
-            <a href="portfolio-details-pokemon.html" class="btn btn-primary btn-sm" aria-label="View details of Pokémon Web Application">View Details</a>
-            <a href="https://github.com/shane-bowman/CWEB280-Project1-2" class="d-block mt-2" aria-label="View Pokémon web app source code on GitHub"><i class="bi bi-github"></i> Source Code</a>
+            <div class="artifact-links">
+              <a href="portfolio-details-pokemon.html" class="btn btn-primary btn-sm" aria-label="View details of Pokémon Web Application">View Details</a>
+              <a href="https://github.com/shane-bowman/CWEB280-Project1-2" class="github-link" aria-label="View Pokémon web app source code on GitHub"><i class="bi bi-github"></i> Source Code</a>
+            </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4 artifact-item">
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 artifact-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="artifact-card">
           <img src="assets/img/hippologo.png" class="img-fluid" alt="Main screen of Hippotherapy Flutter App">
           <div class="artifact-info">
             <h4>Hippotherapy Flutter App</h4>
             <p>Collaborative Flutter app for therapeutic assessments, with login and tutorial features.</p>
-            <a href="portfolio-details-hippotherapy.html" class="btn btn-primary btn-sm" aria-label="View details of Hippotherapy Flutter App">View Details</a>
-            <a href="https://github.com/shane-bowman/Hippotherapy-App" class="d-block mt-2" aria-label="View Hippotherapy Flutter app source code on GitHub"><i class="bi bi-github"></i> Source Code</a>
+            <div class="artifact-links">
+              <a href="portfolio-details-hippotherapy.html" class="btn btn-primary btn-sm" aria-label="View details of Hippotherapy Flutter App">View Details</a>
+              <a href="https://github.com/shane-bowman/Hippotherapy-App" class="github-link" aria-label="View Hippotherapy Flutter app source code on GitHub"><i class="bi bi-github"></i> Source Code</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section><!-- /Artifacts Section -->
+  </div>
+</section>
+<!-- /Artifacts Section -->
 
   <!-- Contact Section -->
   <section id="contact" class="contact section">

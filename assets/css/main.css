@@ -18,12 +18,12 @@
 
 /* Global Colors */
 :root {
-  --background-color: #f8f9fa; /* Light gray background */
-  --default-color: #4e4e4e; /* Default text color */
-  --heading-color: #0a090f; /* Headings and titles */
-  --accent-color: #0078ff; /* Brand color for buttons, links */
-  --surface-color: #ffffff; /* Background for boxed elements */
-  --contrast-color: #ffffff; /* Text contrast against accent/heading */
+  --background-color: #F5F6FA;
+  --default-color: #444444;
+  --heading-color: #2E2E2E;
+  --accent-color: #17A2B8;
+  --surface-color: #FFFFFF;
+  --contrast-color: #FFFFFF;
 }
 
 /* Nav Menu Colors */
@@ -567,67 +567,209 @@ section, .section {
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
-.skills .container {
-  padding: 0 15px;
+.skills-section {
+  padding: 60px 0;
 }
 
-.skills h5 {
-  font-size: 22px;
+.skills-section .section-title {
+  margin-bottom: 40px;
+}
+
+.skills-section h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: var(--heading-color);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.skills-section h5:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  bottom: 0;
+}
+
+.skills-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-section li {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
   margin-bottom: 15px;
+  border-left: 4px solid var(--accent-color);
+  background: #F8FAFC;
+  border-radius: 0 6px 6px 0;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.skills ul {
-  padding-left: 20px;
+.skills-section li:hover {
+  background: #EDEFF2;
+  transform: translateX(5px);
 }
 
-.skills ul li {
+.skills-section li i {
+  font-size: 22px;
+  margin-right: 15px;
+  color: var(--accent-color);
+  margin-top: 2px;
+}
+
+.skills-section li strong {
+  font-weight: 600;
+  color: var(--heading-color);
+  font-size: 1.1rem;
+}
+
+.skills-section li span {
   font-size: 15px;
-  margin-bottom: 10px;
+  color: var(--default-color);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .skills-section li {
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+
+  .skills-section li i {
+    font-size: 20px;
+    margin-right: 12px;
+  }
+
+  .skills-section li strong {
+    font-size: 1rem;
+  }
+
+  .skills-section li span {
+    font-size: 14px;
+  }
 }
 
 /*--------------------------------------------------------------
 # Artifacts Section
 --------------------------------------------------------------*/
 .artifacts .artifact-item {
-  border: 1px solid #dee2e6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artifacts .artifact-card {
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
 
-.artifacts .artifact-item img {
-  border-radius: 10px 10px 0 0;
-  object-fit: cover;
+.artifacts .artifact-item:hover .artifact-card {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.artifacts .artifact-card img {
   height: 200px;
   width: 100%;
+  object-fit: cover;
 }
 
 .artifacts .artifact-info {
-  padding: 15px;
+  padding: 20px;
 }
 
 .artifacts .artifact-info h4 {
-  color: #0078ff;
-  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--heading-color);
   margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.artifacts .artifact-item:hover h4 {
+  color: var(--accent-color);
 }
 
 .artifacts .artifact-info p {
   font-size: 14px;
-  margin-bottom: 10px;
+  color: var(--default-color);
+  margin-bottom: 15px;
+}
+
+.artifacts .artifact-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .artifacts .artifact-info .btn-primary {
   font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
-.artifacts .artifact-info a[href*="github.com"] {
+.artifacts .artifact-info .btn-primary:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.artifacts .artifact-info .github-link {
   font-size: 14px;
-  color: #0078ff;
+  color: var(--default-color);
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
 }
 
-.artifacts .artifact-info a[href*="github.com"] i {
+.artifacts .artifact-info .github-link i {
   margin-right: 5px;
+  font-size: 16px;
+}
+
+.artifacts .artifact-info .github-link:hover {
+  color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .artifacts .artifact-card img {
+    height: 150px;
+  }
+
+  .artifacts .artifact-info {
+    padding: 15px;
+  }
+
+  .artifacts .artifact-info h4 {
+    font-size: 1.1rem;
+  }
+
+  .artifacts .artifact-info p {
+    font-size: 13px;
+  }
+
+  .artifacts .artifact-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .artifacts .artifact-info .btn-primary {
+    font-size: 13px;
+    padding: 6px 18px;
+  }
+
+  .artifacts .artifact-info .github-link {
+    font-size: 13px;
+  }
 }
 
 /*--------------------------------------------------------------
