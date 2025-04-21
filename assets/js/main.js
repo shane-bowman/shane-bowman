@@ -163,19 +163,48 @@
   const navmenulinks = document.querySelectorAll('.navmenu a');
 
   function navmenuScrollspy() {
+    const headerHeight = document.querySelector('#header').offsetHeight || 76; // Match scroll-margin-top
+    const documentHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
+    const maxScroll = documentHeight - windowHeight;
+    const scrollPosition = window.scrollY + headerHeight;
+
+    let activeSet = false;
+
     navmenulinks.forEach(navmenulink => {
       if (!navmenulink.hash) return;
       const section = document.querySelector(navmenulink.hash);
       if (!section) return;
-      const position = window.scrollY + 200;
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+
+      const sectionTop = section.offsetTop;
+      const sectionBottom = sectionTop + section.offsetHeight;
+
+      // Check if scrolled to the bottom of the page
+      if (window.scrollY >= maxScroll && navmenulink.hash === '#contact') {
         document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
         navmenulink.classList.add('active');
-      } else {
+        activeSet = true;
+      }
+      // Normal scrollspy logic
+      else if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
+        navmenulink.classList.add('active');
+        activeSet = true;
+      } else if (!activeSet) {
         navmenulink.classList.remove('active');
       }
     });
   }
+
+// Ensure active state updates on click
+  navmenulinks.forEach(navmenulink => {
+    navmenulink.addEventListener('click', (e) => {
+      document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
+      navmenulink.classList.add('active');
+      navmenuScrollspy(); // Re-run scrollspy after click to ensure correct state
+    });
+  });
+
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
