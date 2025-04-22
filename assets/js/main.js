@@ -101,7 +101,7 @@
       mirror: false
     });
   }
-  window.addEventListener('load', aosInit);
+  document.addEventListener('DOMContentLoaded', aosInit);
 
   /**
    * Init typed.js with a slight delay to ensure DOM readiness
